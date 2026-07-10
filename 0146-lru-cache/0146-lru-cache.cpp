@@ -63,10 +63,10 @@ public:
             delnode(del);
             addnode(newnode);
             mp[key] = newnode;
-            return;
+            
         }
 
-        if( mp.size() < limit){
+        else if( mp.size() < limit){
             addnode(newnode);
             mp[key] = newnode;
         }
