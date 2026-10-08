@@ -1,0 +1,32 @@
+class Solution {
+public:
+    string removeOuterParentheses(string s) {
+        string ans = "";
+        int balance = 0;
+
+        for (char ch : s) {
+
+            if (ch == '(') {
+                // If balance is already > 0,
+                // this '(' is not the outermost one
+                if (balance > 0) {
+                    ans += ch;
+                }
+
+                balance++;
+            }
+
+            else {
+                balance--;
+
+                // If balance is still > 0,
+                // this ')' is not the outermost one
+                if (balance > 0) {
+                    ans += ch;
+                }
+            }
+        }
+
+        return ans;
+    }
+};
