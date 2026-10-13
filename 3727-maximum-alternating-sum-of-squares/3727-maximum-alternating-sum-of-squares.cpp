@@ -1,10 +1,10 @@
 class Solution {
 public:
-    long long maxAlternatingSum(vector<int>& nums) {
-        int n = nums.size();
-        vector<int>sq(n);
+    long long maxAlternatingSum(vector<int>& sq) {
+        int n = sq.size();
+        
         for(int i=0;i<n;i++){
-           sq[i] = nums[i]*nums[i];
+           sq[i] = sq[i]*sq[i];
         }
         sort(sq.begin(),sq.end());
 
