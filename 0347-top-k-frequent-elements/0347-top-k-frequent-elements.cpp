@@ -29,6 +29,7 @@ public:
                 ans.push_back(bucket[i][j]);
                 k--;
             }
+            if(k<=0) break;
         
     }
 
