@@ -26,8 +26,8 @@ public:
             else
                 ans = findpath(grid, i + 1, j, 1, dp);
         } else {
-            ans = findpath(grid, i, j + 1, 2, dp);
-            ans = (ans + findpath(grid, i + 1, j, 1, dp)) % MOD;
+            ans = findpath(grid, i, j + 1, 2, dp)  + findpath(grid, i + 1, j, 1, dp);
+             
         }
 
         return dp[i][j][d] = ans % MOD;
